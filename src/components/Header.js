@@ -132,7 +132,7 @@ const StyledNavLink = styled(NavLink).attrs({ activeClassName })`
   @media ${({ theme }) => theme.devices.tablet} {
     display: flex;
     margin: 0.25rem 0;
-    font-size: ${({ theme }) => theme.fontSizes.base};
+    font-size: ${({ theme }) => theme.fontSizes.sm};
     padding: 0.5rem 0.5rem;
     align-self: flex-start;
 
@@ -199,11 +199,11 @@ const LoginBtn = styled(Link)`
 
   @media ${({ theme }) => theme.devices.tablet} {
     align-self: flex-start;
-    margin: 0.5rem 0;
+    margin: 0.25rem 0;
     padding: 0.5rem 0.5rem;
     background-color: transparent;
     color: black;
-    font-size: ${({ theme }) => theme.fontSizes.base};
+    font-size: ${({ theme }) => theme.fontSizes.sm};
 
     &:hover {
       background-color: ${({ theme }) => theme.colors.gray_1};
