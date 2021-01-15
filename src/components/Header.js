@@ -1,12 +1,16 @@
+import React, { useState } from "react";
 import styled, { ThemeProvider, css } from "styled-components";
 import logo from "../assets/disquiet_logo.png";
-import mediaQuery from "../lib/styles/mediaQuery";
 import { NavLink, Link } from "react-router-dom";
 import theme from "../theme";
-import { Button } from "../GlobalStyles";
-import MenuRoundedIcon from "@material-ui/icons/MenuRounded";
+import MenuIcon from "@material-ui/icons/Menu";
+import CloseIcon from "@material-ui/icons/Close";
 
 function Header() {
+  const [click, setClick] = useState(false);
+
+  const handleClick = () => setClick(!click);
+
   return (
     <ThemeProvider theme={theme}>
       <Navbar>
@@ -14,9 +18,9 @@ function Header() {
           <LogoLink exact to="/">
             <img src={logo} alt="logo" height="19" />
           </LogoLink>
-          <NavMenu>
-            <StyledNavLink to="/blog">블로그</StyledNavLink>
+          <NavMenu click={click}>
             <StyledNavLink to="/community">커뮤니티</StyledNavLink>
+            <StyledNavLink to="/blog">블로그</StyledNavLink>
             <StyledNavLink to="/product/new">프로덕트 공유하기</StyledNavLink>
             <NavMenuDivider></NavMenuDivider>
             <LoginBtn to="/login">로그인</LoginBtn>
@@ -24,8 +28,12 @@ function Header() {
               회원가입
             </LoginBtn>
           </NavMenu>
-          <NavMenuBtn>
-            <MenuRoundedIcon />
+          <NavMenuBtn onClick={handleClick}>
+            {click ? (
+              <CloseIcon style={{ color: "black" }} />
+            ) : (
+              <MenuIcon style={{ color: "black" }} />
+            )}
           </NavMenuBtn>
         </NavContainer>
       </Navbar>
@@ -69,7 +77,15 @@ const NavMenu = styled.div`
   height: 48px;
 
   @media ${({ theme }) => theme.devices.tablet} {
-    display: none;
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+    position: absolute;
+    top: 48px;
+    height: 100%;
+    width: 100%;
+    right: ${({ click }) => (click ? 0 : "-100%")};
+    transition: all 0.4s ease;
   }
   @media ${({ theme }) => theme.devices.mobileLandscape} {
   }
@@ -84,7 +100,7 @@ const StyledNavLink = styled(NavLink).attrs({ activeClassName })`
   flex-direction: row;
   align-items: center;
   margin-left: 1rem;
-  font-size: ${({ theme }) => theme.fontSizes.small};
+  font-size: ${({ theme }) => theme.fontSizes.sm};
   line-height: 1em;
   color: black;
   text-decoration: none;
@@ -97,21 +113,13 @@ const StyledNavLink = styled(NavLink).attrs({ activeClassName })`
   &.${activeClassName} {
     box-shadow: 0px 1px 0px ${({ theme }) => theme.colors.primary};
   }
-`;
 
-const LoginBtn = styled(Link)`
-  margin-left: ${({ primary }) => (primary ? "0.5rem" : "0")};
-  padding: 0.75rem 0.75rem;
-  background-color: ${({ primary }) => (primary ? "#6D55FF" : "#ededed")};
-  font-size: ${({ theme }) => theme.fontSizes.small};
-  color: ${({ primary }) => (primary ? "white" : "black")};
-  line-height: 1em;
-  text-decoration: none;
-  border-radius: 10rem;
-  font-weight: 500;
-
-  &:hover {
-    opacity: 0.7;
+  @media ${({ theme }) => theme.devices.tablet} {
+    justify-content: center;
+    color: white;
+    margin-left: 0;
+    min-height: auto;
+    font-size: ${({ theme }) => theme.fontSizes.xl};
   }
 `;
 
@@ -121,18 +129,50 @@ const NavMenuDivider = styled.div`
   margin: 0 1rem;
   display: block;
   background-color: ${({ theme }) => theme.colors.gray_2};
-`;
-
-const NavMenuBtn = styled.div`
-  display: none;
 
   @media ${({ theme }) => theme.devices.tablet} {
-    display: block;
+    display: none;
+  }
+`;
+
+const LoginBtn = styled(Link)`
+  margin-left: ${({ primary }) => (primary ? "0.5rem" : "0")};
+  padding: 0.75rem 0.75rem;
+  background-color: ${({ primary }) => (primary ? "#6D55FF" : "#ededed")};
+  font-size: ${({ theme }) => theme.fontSizes.sm};
+  color: ${({ primary }) => (primary ? "white" : "black")};
+  line-height: 1em;
+  text-decoration: none;
+  border-radius: 10rem;
+  font-weight: 400;
+
+  &:hover {
+    opacity: 0.7;
+  }
+
+  @media ${({ theme }) => theme.devices.tablet} {
+    font-size: ${({ theme }) => theme.fontSizes.xl};
+    margin-left: 0;
+    color: white;
+    background-color: transparent;
+  }
+`;
+
+const NavMenuBtn = styled.button`
+  display: none;
+  cursor: pointer;
+  background: ${({ theme }) => theme.colors.gray_2};
+  border-radius: 20rem;
+  border: none;
+  height: 38px;
+  width: 38px;
+  outline: none;
+
+  @media ${({ theme }) => theme.devices.tablet} {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   } ;
 `;
-
-const NavMenuBtnIcn = styled.div`
-  background-color: blue;
-`;
-
 export default Header;
