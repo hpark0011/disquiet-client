@@ -26,17 +26,15 @@ const colors = {
 };
 
 const deviceSizes = {
-  mobilePortrait: "320px",
-  mobileLandscape: "568px",
-  tablet: "768px",
-  desktop: "1240px",
+  mobilePortrait: "478px",
+  mobileLandscape: "768px",
+  tablet: "990px",
 };
 
 const devices = {
   mobilePortrait: `screen and (max-width: ${deviceSizes.mobilePortrait})`,
   mobileLandscape: `screen and (max-width: ${deviceSizes.mobileLandscape})`,
   tablet: `screen and (max-width: ${deviceSizes.tablet})`,
-  desktop: `screen and (max-width: ${deviceSizes.desktop})`,
 };
 
 const theme = {

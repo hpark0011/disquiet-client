@@ -4,6 +4,7 @@ import mediaQuery from "../lib/styles/mediaQuery";
 import { NavLink, Link } from "react-router-dom";
 import theme from "../theme";
 import { Button } from "../GlobalStyles";
+import MenuRoundedIcon from "@material-ui/icons/MenuRounded";
 
 function Header() {
   return (
@@ -18,11 +19,14 @@ function Header() {
             <StyledNavLink to="/community">커뮤니티</StyledNavLink>
             <StyledNavLink to="/product/new">프로덕트 공유하기</StyledNavLink>
             <NavMenuDivider></NavMenuDivider>
-            <LoginButton to="/login">로그인</LoginButton>
-            <LoginButton primary={true} to="/register">
+            <LoginBtn to="/login">로그인</LoginBtn>
+            <LoginBtn primary={true} to="/register">
               회원가입
-            </LoginButton>
+            </LoginBtn>
           </NavMenu>
+          <NavMenuBtn>
+            <MenuRoundedIcon />
+          </NavMenuBtn>
         </NavContainer>
       </Navbar>
     </ThemeProvider>
@@ -44,9 +48,6 @@ const NavContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  ${mediaQuery.mobile} {
-    width: 100%;
-  }
 `;
 
 const LogoLink = styled(NavLink)`
@@ -66,6 +67,14 @@ const NavMenu = styled.div`
   flex-direction: row;
   align-items: center;
   height: 48px;
+
+  @media ${({ theme }) => theme.devices.tablet} {
+    display: none;
+  }
+  @media ${({ theme }) => theme.devices.mobileLandscape} {
+  }
+  @media ${({ theme }) => theme.devices.mobilePortrait} {
+  }
 `;
 
 const activeClassName = "nav-item-active";
@@ -90,7 +99,7 @@ const StyledNavLink = styled(NavLink).attrs({ activeClassName })`
   }
 `;
 
-const LoginButton = styled(Link)`
+const LoginBtn = styled(Link)`
   margin-left: ${({ primary }) => (primary ? "0.5rem" : "0")};
   padding: 0.75rem 0.75rem;
   background-color: ${({ primary }) => (primary ? "#6D55FF" : "#ededed")};
@@ -112,6 +121,18 @@ const NavMenuDivider = styled.div`
   margin: 0 1rem;
   display: block;
   background-color: ${({ theme }) => theme.colors.gray_2};
+`;
+
+const NavMenuBtn = styled.div`
+  display: none;
+
+  @media ${({ theme }) => theme.devices.tablet} {
+    display: block;
+  } ;
+`;
+
+const NavMenuBtnIcn = styled.div`
+  background-color: blue;
 `;
 
 export default Header;
