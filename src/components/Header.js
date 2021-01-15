@@ -22,7 +22,7 @@ function Header() {
             <StyledNavLink to="/community">커뮤니티</StyledNavLink>
             <StyledNavLink to="/blog">블로그</StyledNavLink>
             <StyledNavLink to="/product/new">프로덕트 공유하기</StyledNavLink>
-            <NavMenuDivider></NavMenuDivider>
+            <NavMenuDivider />
             <LoginBtn to="/login">로그인</LoginBtn>
             <LoginBtn primary={true} to="/register">
               회원가입
@@ -56,6 +56,10 @@ const NavContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  @media ${({ theme }) => theme.devices.tablet} {
+    padding: 0 1rem;
+  }
 `;
 
 const LogoLink = styled(NavLink)`
@@ -77,8 +81,23 @@ const NavMenu = styled.div`
   height: 48px;
 
   @media ${({ theme }) => theme.devices.tablet} {
+    display: ${({ click }) => (click ? "flex" : "none")};
+    padding: 0.5rem;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    height: ${({ click }) => (click ? "auto" : "0px")};
+    top: 3.5rem;
+    right: 1rem;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
+    border-radius: 1rem;
+  }
+
+  @media ${({ theme }) => theme.devices.mobilePortrait} {
     display: flex;
     flex-direction: column;
+    align-items: flex-end;
     background-color: black;
     position: absolute;
     top: 48px;
@@ -86,10 +105,6 @@ const NavMenu = styled.div`
     width: 100%;
     right: ${({ click }) => (click ? 0 : "-100%")};
     transition: all 0.4s ease;
-  }
-  @media ${({ theme }) => theme.devices.mobileLandscape} {
-  }
-  @media ${({ theme }) => theme.devices.mobilePortrait} {
   }
 `;
 
@@ -115,11 +130,32 @@ const StyledNavLink = styled(NavLink).attrs({ activeClassName })`
   }
 
   @media ${({ theme }) => theme.devices.tablet} {
+    display: flex;
+    margin: 0.25rem 0;
+    font-size: ${({ theme }) => theme.fontSizes.base};
+    padding: 0.5rem 0.5rem;
+    align-self: flex-start;
+
+    &:hover {
+      background-color: ${({ theme }) => theme.colors.gray_1};
+      border-radius: 0.75rem;
+      box-shadow: none;
+    }
+
+    &.${activeClassName} {
+      background-color: ${({ theme }) => theme.colors.gray_1};
+      border-radius: 0.75rem;
+      box-shadow: none;
+    }
+  }
+
+  @media ${({ theme }) => theme.devices.mobilePortrait} {
+    padding: 0.75rem;
     justify-content: center;
     color: white;
-    margin-left: 0;
+    margin: 1.2rem 0;
     min-height: auto;
-    font-size: ${({ theme }) => theme.fontSizes.xl};
+    font-size: ${({ theme }) => theme.fontSizes.xxxl};
   }
 `;
 
@@ -131,7 +167,18 @@ const NavMenuDivider = styled.div`
   background-color: ${({ theme }) => theme.colors.gray_2};
 
   @media ${({ theme }) => theme.devices.tablet} {
-    display: none;
+    display: block;
+    height: 1px;
+    width: 100%;
+    background-color: #f0f0f0;
+    margin: 0.5rem;
+  }
+
+  @media ${({ theme }) => theme.devices.mobilePortrait} {
+    margin: 2rem 0;
+    height: 1px;
+    width: 100%;
+    display: block;
   }
 `;
 
@@ -151,6 +198,22 @@ const LoginBtn = styled(Link)`
   }
 
   @media ${({ theme }) => theme.devices.tablet} {
+    align-self: flex-start;
+    margin: 0.5rem 0;
+    padding: 0.5rem 0.5rem;
+    background-color: transparent;
+    color: black;
+    font-size: ${({ theme }) => theme.fontSizes.base};
+
+    &:hover {
+      background-color: ${({ theme }) => theme.colors.gray_1};
+      border-radius: 0.75rem;
+      box-shadow: none;
+      opacity: 1;
+    }
+  }
+
+  @media ${({ theme }) => theme.devices.mobilePortrait} {
     font-size: ${({ theme }) => theme.fontSizes.xl};
     margin-left: 0;
     color: white;
@@ -161,7 +224,7 @@ const LoginBtn = styled(Link)`
 const NavMenuBtn = styled.button`
   display: none;
   cursor: pointer;
-  background: ${({ theme }) => theme.colors.gray_2};
+  background: ${({ theme }) => theme.colors.gray_1};
   border-radius: 20rem;
   border: none;
   height: 38px;
@@ -173,6 +236,9 @@ const NavMenuBtn = styled.button`
     flex-direction: column;
     justify-content: center;
     align-items: center;
+  }
+
+  @media ${({ theme }) => theme.devices.mobilePortrait} {
   } ;
 `;
 export default Header;

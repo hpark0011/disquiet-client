@@ -1,4 +1,5 @@
 import styled, { createGlobalStyle } from "styled-components";
+import theme from './theme'
 
 const GlobalStyles = createGlobalStyle`
 body {
@@ -20,6 +21,10 @@ const Container = styled.div`
   height: auto;
   max-width: 1120px;
   display: block;
+
+  @media screen and (max-width: 990px) {
+    padding: 0 1rem;
+  } ;
 `;
 
 export { GlobalStyles, Container, Section };
