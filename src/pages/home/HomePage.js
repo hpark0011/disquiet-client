@@ -1,16 +1,26 @@
-import { useLocation } from 'react-router-dom';
-import PageContainer from '../../components/PageContainer';
+import PageContainer from "../../components/PageContainer";
+import { Container } from "../../GlobalStyles";
+import styled from "styled-components";
+import LeftColumn from "./LeftColumn";
+import CenterColumn from "./CenterColumn";
+import RightColumn from "./RightColumn";
 
 function HomePage() {
-  const location = useLocation();
   return (
     <PageContainer>
-      homepage!<br />
-      <a href={`http://localhost:8000/api/auth/redirect/google?next=${location.pathname}${location.search}`}>
-        <button>Google Login</button>
-      </a>
+      <MainContainer>
+        <LeftColumn />
+        <CenterColumn />
+        <RightColumn />
+      </MainContainer>
     </PageContainer>
   );
 }
+
+const MainContainer = styled(Container)`
+  display: grid;
+  grid-template-columns: 2fr 7fr 3fr;
+  gap: 32px;
+`;
 
 export default HomePage;

@@ -18,7 +18,7 @@ function Header() {
           <LogoLink exact to="/">
             <img src={logo} alt="logo" height="19" />
           </LogoLink>
-          <NavMenu click={click}>
+          <NavMenu onClick={handleClick} click={click}>
             <StyledNavLink to="/community">커뮤니티</StyledNavLink>
             <StyledNavLink to="/blog">블로그</StyledNavLink>
             <StyledNavLink to="/product/new">프로덕트 공유하기</StyledNavLink>

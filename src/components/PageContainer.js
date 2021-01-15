@@ -1,4 +1,5 @@
 import { Container, Section } from "../GlobalStyles";
+import styled from "styled-components";
 // import { createGlobalStyle } from 'styled-components';
 
 // const GlobalStyle = createGlobalStyle`
@@ -14,5 +15,7 @@ const PageContainer = ({ children }) => {
     </>
   );
 };
+
+
 
 export default PageContainer;
