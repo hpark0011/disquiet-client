@@ -5,6 +5,7 @@ import { NavLink, Link } from "react-router-dom";
 import theme from "../theme";
 import MenuIcon from "@material-ui/icons/Menu";
 import CloseIcon from "@material-ui/icons/Close";
+import AddCircleIcon from "@material-ui/icons/AddCircle";
 
 function Header() {
   const [click, setClick] = useState(false);
@@ -21,20 +22,23 @@ function Header() {
           <NavMenu onClick={handleClick} click={click}>
             <StyledNavLink to="/community">커뮤니티</StyledNavLink>
             <StyledNavLink to="/blog">블로그</StyledNavLink>
-            <StyledNavLink to="/product/new">프로덕트 공유하기</StyledNavLink>
             <NavMenuDivider />
+            <StyledNavLink cta to="/product/new">
+              <StyledAddCircleIcon />
+              프로덕트 공유하기
+            </StyledNavLink>
             <LoginBtn to="/login">로그인</LoginBtn>
             <LoginBtn primary={true} to="/register">
               회원가입
             </LoginBtn>
           </NavMenu>
-          <NavMenuBtn onClick={handleClick}>
+          <NavMenuIcon onClick={handleClick}>
             {click ? (
               <CloseIcon style={{ color: "black" }} />
             ) : (
               <MenuIcon style={{ color: "black" }} />
             )}
-          </NavMenuBtn>
+          </NavMenuIcon>
         </NavContainer>
       </Navbar>
     </ThemeProvider>
@@ -100,6 +104,7 @@ const NavMenu = styled.div`
     align-items: flex-end;
     background-color: black;
     position: absolute;
+    z-index: 100;
     top: 48px;
     height: 100%;
     width: 100%;
@@ -114,7 +119,8 @@ const StyledNavLink = styled(NavLink).attrs({ activeClassName })`
   display: flex;
   flex-direction: row;
   align-items: center;
-  margin-left: 1rem;
+  margin-left: ${({ cta }) => (cta ? "0px" : "1rem")};
+  margin-right: ${({ cta }) => (cta ? ".5rem" : "0")};
   font-size: ${({ theme }) => theme.fontSizes.sm};
   line-height: 1em;
   color: black;
@@ -183,7 +189,7 @@ const NavMenuDivider = styled.div`
 `;
 
 const LoginBtn = styled(Link)`
-  margin-left: ${({ primary }) => (primary ? "0.5rem" : "0")};
+  margin-left: 0.5rem;
   padding: 0.75rem 0.75rem;
   background-color: ${({ primary }) => (primary ? "#6D55FF" : "#ededed")};
   font-size: ${({ theme }) => theme.fontSizes.sm};
@@ -221,7 +227,17 @@ const LoginBtn = styled(Link)`
   }
 `;
 
-const NavMenuBtn = styled.button`
+const StyledAddCircleIcon = styled(AddCircleIcon)`
+  display: block;
+  color: #6d55ff;
+  margin-right: 4px;
+
+  @media ${({ theme }) => theme.devices.tablet} {
+    display: none;
+  }
+`;
+
+const NavMenuIcon = styled.button`
   display: none;
   cursor: pointer;
   background: ${({ theme }) => theme.colors.gray_1};
@@ -230,14 +246,12 @@ const NavMenuBtn = styled.button`
   height: 38px;
   width: 38px;
   outline: none;
-
   @media ${({ theme }) => theme.devices.tablet} {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
   }
-
   @media ${({ theme }) => theme.devices.mobilePortrait} {
   } ;
 `;
