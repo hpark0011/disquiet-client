@@ -147,7 +147,7 @@ const StyledNavLink = styled(NavLink).attrs({ activeClassName })`
   }
 
   @media ${({ theme }) => theme.devices.tablet} {
-    display: block;
+    display: flex;
     margin: 0.25rem 0;
     padding: 0.5rem 0.5rem;
     font-size: ${({ theme }) => theme.fontSizes.sm};
@@ -186,7 +186,7 @@ const NavMenuDivider = styled.div`
   @media ${({ theme }) => theme.devices.tablet} {
     display: block;
     height: 1px;
-    width: 100%;
+    width: auto;
     background-color: #f0f0f0;
     margin: 0.5rem;
   }
@@ -244,9 +244,6 @@ const StyledAddCircleIcon = styled(AddCircleIcon)`
 
   @media ${({ theme }) => theme.devices.tablet} {
     display: none;
-    path {
-      display: none;
-    }
   }
 `;
 
