@@ -20,17 +20,19 @@ function Header() {
             <img src={logo} alt="logo" height="19" />
           </LogoLink>
           <NavMenu onClick={handleClick} click={click}>
-            <StyledNavLink to="/community">커뮤니티</StyledNavLink>
-            <StyledNavLink to="/blog">블로그</StyledNavLink>
-            <NavMenuDivider />
-            <StyledNavLink cta to="/product/new">
-              <StyledAddCircleIcon />
-              프로덕트 공유하기
-            </StyledNavLink>
-            <LoginBtn to="/login">로그인</LoginBtn>
-            <LoginBtn primary={true} to="/register">
-              회원가입
-            </LoginBtn>
+            <NavMenuContainer>
+              <StyledNavLink to="/community">커뮤니티</StyledNavLink>
+              <StyledNavLink to="/blog">블로그</StyledNavLink>
+              <NavMenuDivider />
+              <StyledNavLink cta to="/product/new">
+                <StyledAddCircleIcon />
+                프로덕트 공유하기
+              </StyledNavLink>
+              <LoginBtn to="/login">로그인</LoginBtn>
+              <LoginBtn primary={true} to="/register">
+                회원가입
+              </LoginBtn>
+            </NavMenuContainer>
           </NavMenu>
           <NavMenuIcon onClick={handleClick}>
             {click ? (
@@ -79,10 +81,10 @@ const LogoLink = styled(NavLink)`
 `;
 
 const NavMenu = styled.div`
-  display: flex;
+  display: block;
   flex-direction: row;
   align-items: center;
-  height: 48px;
+  height: 48px auto;
 
   @media ${({ theme }) => theme.devices.tablet} {
     display: ${({ click }) => (click ? "flex" : "none")};
@@ -113,11 +115,20 @@ const NavMenu = styled.div`
   }
 `;
 
+const NavMenuContainer = styled.div`
+  display: flex;
+  align-items: center;
+  height: 100%;
+
+  @media ${({ theme }) => theme.devices.tablet} {
+    display: block;
+  }
+`;
+
 const activeClassName = "nav-item-active";
 
 const StyledNavLink = styled(NavLink).attrs({ activeClassName })`
   display: flex;
-  flex-direction: row;
   align-items: center;
   margin-left: ${({ cta }) => (cta ? "0px" : "1rem")};
   margin-right: ${({ cta }) => (cta ? ".5rem" : "0")};
@@ -125,7 +136,7 @@ const StyledNavLink = styled(NavLink).attrs({ activeClassName })`
   line-height: 1em;
   color: black;
   text-decoration: none;
-  min-height: 100%;
+  height: 48px;
 
   &:hover {
     box-shadow: 0px 1px 0px ${({ theme }) => theme.colors.primary};
@@ -136,11 +147,11 @@ const StyledNavLink = styled(NavLink).attrs({ activeClassName })`
   }
 
   @media ${({ theme }) => theme.devices.tablet} {
-    display: flex;
+    display: block;
     margin: 0.25rem 0;
-    font-size: ${({ theme }) => theme.fontSizes.sm};
     padding: 0.5rem 0.5rem;
-    align-self: flex-start;
+    font-size: ${({ theme }) => theme.fontSizes.sm};
+    height: auto;
 
     &:hover {
       background-color: ${({ theme }) => theme.colors.gray_1};
@@ -204,7 +215,7 @@ const LoginBtn = styled(Link)`
   }
 
   @media ${({ theme }) => theme.devices.tablet} {
-    align-self: flex-start;
+    display: block;
     margin: 0.25rem 0;
     padding: 0.5rem 0.5rem;
     background-color: transparent;
@@ -228,12 +239,14 @@ const LoginBtn = styled(Link)`
 `;
 
 const StyledAddCircleIcon = styled(AddCircleIcon)`
-  display: block;
   color: #6d55ff;
   margin-right: 4px;
 
   @media ${({ theme }) => theme.devices.tablet} {
     display: none;
+    path {
+      display: none;
+    }
   }
 `;
 
@@ -255,4 +268,5 @@ const NavMenuIcon = styled.button`
   @media ${({ theme }) => theme.devices.mobilePortrait} {
   } ;
 `;
+
 export default Header;
