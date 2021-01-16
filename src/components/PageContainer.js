@@ -9,13 +9,9 @@ import styled from "styled-components";
 const PageContainer = ({ children }) => {
   return (
     <>
-      <Section>
-        <Container>{children}</Container>
-      </Section>
+      <Section>{children}</Section>
     </>
   );
 };
-
-
 
 export default PageContainer;
