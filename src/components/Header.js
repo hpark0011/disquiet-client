@@ -202,7 +202,9 @@ const NavMenuDivider = styled.div`
 const LoginBtn = styled(Link)`
   margin-left: 0.5rem;
   padding: 0.75rem 0.75rem;
-  background-color: ${({ primary }) => (primary ? "#6D55FF" : "#ededed")};
+  background-color: ${({ primary }) => (primary ? "#6D55FF" : "#fff")};
+  border: ${({ primary }) =>
+    primary ? "solid 1px #6D55FF" : "solid 1px #E0E0E0"};
   font-size: ${({ theme }) => theme.fontSizes.sm};
   color: ${({ primary }) => (primary ? "white" : "black")};
   line-height: 1em;
@@ -219,6 +221,7 @@ const LoginBtn = styled(Link)`
     margin: 0.25rem 0;
     padding: 0.5rem 0.5rem;
     background-color: transparent;
+    border: none;
     color: black;
     font-size: ${({ theme }) => theme.fontSizes.sm};
 
