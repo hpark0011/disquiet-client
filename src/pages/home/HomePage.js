@@ -20,6 +20,8 @@ function HomePage() {
 const MainContainer = styled(Container)`
   display: grid;
   grid-template-columns: 2fr 7fr 3fr;
+  position: relative;
+  z-index: 0;
   gap: 32px;
 `;
 

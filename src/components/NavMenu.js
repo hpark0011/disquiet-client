@@ -5,9 +5,9 @@ import theme from "../theme";
 import AddCircleIcon from "@material-ui/icons/AddCircle";
 
 const NavMenu = ({ onClick, click }) => {
-     const [click, setClick] = useState(false);
+  const [click, setClick] = useState(false);
 
-     const handleClick = () => setClick(!click);
+  const handleClick = () => setClick(!click);
   return (
     <ThemeProvider theme={theme}>
       <Container>
@@ -40,6 +40,7 @@ const Container = styled.div`
     align-items: center;
     justify-content: center;
     position: absolute;
+    z-index: 1000;
     height: ${({ click }) => (click ? "auto" : "0px")};
     top: 3.5rem;
     right: 1rem;

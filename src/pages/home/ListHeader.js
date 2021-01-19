@@ -21,7 +21,7 @@ const ListHeaderWrapper = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-items: flex-end;
+  align-items: center;
   padding-bottom: 1rem;
   border-bottom: solid 1px ${({ theme }) => theme.colors.gray_2};
 

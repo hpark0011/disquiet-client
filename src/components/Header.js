@@ -50,6 +50,11 @@ function Header() {
 const Navbar = styled.div`
   display: block;
   box-shadow: 0px 1px 0px ${({ theme }) => theme.colors.gray_2};
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  width: 100%;
+  background-color: white;
 `;
 
 const NavContainer = styled.div`
