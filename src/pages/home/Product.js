@@ -1,9 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 import styled, { ThemeProvider } from "styled-components";
 import theme from "../../theme";
 import commentIcn from "../../assets/ic-comment.svg";
 import ArrowUpwardIcon from "@material-ui/icons/ArrowUpward";
 const Product = ({ product }) => {
+  const [click, setClick] = useState(false);
+
+  const upvoteButtonClicked = () => {
+    setClick(!click);
+  };
+
   const {
     userName,
     productTitle,
@@ -31,14 +37,19 @@ const Product = ({ product }) => {
                 </CommentLink>
               </ProductFooter>
             </TextContent>
-            <UpvoteWrapper>
-              <ArrowUpwardBorder>
+            <UpvoteButtonWrapper>
+              <UpvoteButton click={click} onClick={upvoteButtonClicked}>
                 <ArrowUpwardIcon
-                  style={{ color: "#8e8e8e", width: "20px", height: "20px" }}
+                  click={click}
+                  style={
+                    click
+                      ? { color: "#707070", width: "20px", height: "20px" }
+                      : { color: "#6D55FF", width: "20px", height: "20px" }
+                  }
                 />
-              </ArrowUpwardBorder>
-              <UpvoteCount>{upvote}</UpvoteCount>
-            </UpvoteWrapper>
+                <UpvoteCount click={click}>{upvote}</UpvoteCount>
+              </UpvoteButton>
+            </UpvoteButtonWrapper>
           </ProductBody>
         </ProductWrapper>
       </ThemeProvider>
@@ -99,14 +110,6 @@ const TextContentDescription = styled.div`
   margin: 0;
 `;
 
-const UpvoteWrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 1;
-`;
-
 const ProductFooter = styled.div`
   display: flex;
   flex-direction: row;
@@ -132,20 +135,32 @@ const CommentLink = styled.div`
   }
 `;
 
-const ArrowUpwardBorder = styled.div`
+const UpvoteButtonWrapper = styled.div`
   display: flex;
-  width: 42px;
-  height: 42px;
-  border-radius: 50%;
-  border: 1px solid ${({ theme }) => theme.colors.gray_2};
   justify-content: center;
   align-items: center;
+`;
+
+const UpvoteButton = styled.button`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid ${({ click }) => (click ? "#fff" : "#6D55FF")};
   background-color: #fff;
+  border-radius: 3rem;
+  cursor: pointer;
+  outline: none;
+  padding: 0.75rem 0.75rem 0.875rem 0.75rem;
+
+  &:hover {
+    background-color: #fafafa;
+  }
 `;
 
 const UpvoteCount = styled.div`
   margin-top: 0.25rem;
   margin-bottom: 0;
   font-size: ${({ theme }) => theme.fontSizes.sm};
-  color: ${({ theme }) => theme.colors.gray_4};
+  color: ${({ click }) => (click ? "#707070" : "#6D55FF")};
 `;

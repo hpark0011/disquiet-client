@@ -37,7 +37,7 @@ export const productsData = [
     productTitle: "Webflow",
     desc: "노코드 웹사이트 빌더",
     upvote: "12",
-    category: "📡 노코드",
+    category: "💻 노코드",
     comment: "93",
     tnImage: "",
     avatarImage: "",
