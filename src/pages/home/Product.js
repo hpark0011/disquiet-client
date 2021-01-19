@@ -4,9 +4,9 @@ import theme from "../../theme";
 import commentIcn from "../../assets/ic-comment.svg";
 import ArrowUpwardIcon from "@material-ui/icons/ArrowUpward";
 const Product = ({ product }) => {
-  const [click, setClick] = useState(false);
+  const [click, setClick] = useState(true);
 
-  const upvoteButtonClicked = () => {
+  const upvoteButtonToggle = () => {
     setClick(!click);
   };
 
@@ -25,7 +25,14 @@ const Product = ({ product }) => {
         <ProductWrapper>
           <ProductHeader>@{userName}</ProductHeader>
           <ProductBody>
-            <TnImage />
+            <TnImage
+              style={{
+                backgroundImage: "url(" + tnImage + ")",
+                backgroundPosition: "center",
+                backgroundSize: "cover",
+              }}
+              tnImage={tnImage}
+            ></TnImage>
             <TextContent>
               <h3>{productTitle}</h3>
               <TextContentDescription>{desc}</TextContentDescription>
@@ -38,7 +45,7 @@ const Product = ({ product }) => {
               </ProductFooter>
             </TextContent>
             <UpvoteButtonWrapper>
-              <UpvoteButton click={click} onClick={upvoteButtonClicked}>
+              <UpvoteButton click={click} onClick={upvoteButtonToggle}>
                 <ArrowUpwardIcon
                   click={click}
                   style={
@@ -79,7 +86,7 @@ const ProductBody = styled.div`
   flex-direction: row;
   background-color: ${({ theme }) => theme.colors.gray_1};
   padding: 1rem;
-  border-radius: 0.75rem;
+  border-radius: 1.5rem;
 `;
 
 const TnImage = styled.div`
@@ -87,6 +94,7 @@ const TnImage = styled.div`
   min-width: 80px;
   min-height: 80px;
   background-color: #fff;
+  border-radius: 0.75rem;
 `;
 
 const TextContent = styled.div`

@@ -28,8 +28,10 @@ export const productsData = [
     upvote: "32",
     category: "📡 중개 플랫폼",
     comment: "8",
-    tnImage: "",
-    avatarImage: "",
+    tnImage:
+      "https://uploads-ssl.webflow.com/5fc51531a09d7c68c1ad5d68/5fc76eabb863f231d6b3915b_tn-image-05.jpg",
+    avatarImage:
+      "https://uploads-ssl.webflow.com/5fc51531a09d7c68c1ad5d68/5fc76f9a60c2693285a0eac5_1606905753766-image14-p-500.jpeg",
   },
   {
     id: 2,
@@ -39,8 +41,10 @@ export const productsData = [
     upvote: "12",
     category: "💻 노코드",
     comment: "93",
-    tnImage: "",
-    avatarImage: "",
+    tnImage:
+      "https://uploads-ssl.webflow.com/5fc51531a09d7c68c1ad5d68/5fc76e7590ec1d32e8e24d9f_tn-iamge-02.jpg",
+    avatarImage:
+      "https://uploads-ssl.webflow.com/5fc51531a09d7c68c1ad5d68/5fc76f9a531a3d21b3951549_1606905754344-image3-p-500.jpeg",
   },
   {
     id: 3,
@@ -50,8 +54,10 @@ export const productsData = [
     upvote: "37",
     category: "🏘 커뮤니티",
     comment: "13",
-    tnImage: "",
-    avatarImage: "",
+    tnImage:
+      "https://uploads-ssl.webflow.com/5fc51531a09d7c68c1ad5d68/5fc76e5895e74945ebc945f5_tn-image-03.jpg",
+    avatarImage:
+      "https://uploads-ssl.webflow.com/5fc51531a09d7c68c1ad5d68/5fc76f9a60c269e70aa0eac6_1606905754437-image6-p-1080.jpeg",
   },
   {
     id: 4,
@@ -61,8 +67,10 @@ export const productsData = [
     upvote: "32",
     category: "🏘 커뮤니티",
     comment: "33",
-    tnImage: "",
-    avatarImage: "",
+    tnImage:
+      "https://uploads-ssl.webflow.com/5fc51531a09d7c68c1ad5d68/5fc76e27de068e53c44799ff_tn-image-04.jpg",
+    avatarImage:
+      "https://uploads-ssl.webflow.com/5fc51531a09d7c68c1ad5d68/5fc76f9a60c2693285a0eac5_1606905753766-image14-p-500.jpeg",
   },
   {
     id: 5,
@@ -72,8 +80,10 @@ export const productsData = [
     upvote: "11",
     category: "🚲 생산성",
     comment: "63",
-    tnImage: "",
-    avatarImage: "",
+    tnImage:
+      "https://uploads-ssl.webflow.com/5fc51531a09d7c68c1ad5d68/5fc76dd3de0a3818fc22d3bc_tn-image-01.jpg",
+    avatarImage:
+      "https://uploads-ssl.webflow.com/5fc51531a09d7c68c1ad5d68/5fc76f9b555c1eee14b09761_1606905754834-image9-p-500.jpeg",
   },
   {
     id: 6,
@@ -83,8 +93,10 @@ export const productsData = [
     upvote: "100",
     category: "👫 소셜",
     comment: "15",
-    tnImage: "",
-    avatarImage: "",
+    tnImage:
+      "https://uploads-ssl.webflow.com/5f7a7ffa492a45b794b9af3b/5f7c5a25f93817a393a2cc03_tn-image-airtable.jpg",
+    avatarImage:
+      "https://uploads-ssl.webflow.com/5fc51531a09d7c68c1ad5d68/5fc76f9bae279adff7830f15_1606905754927-image8-p-500.jpeg",
   },
   {
     id: 7,
@@ -94,7 +106,9 @@ export const productsData = [
     upvote: "8",
     category: "👫 소셜",
     comment: "3",
-    tnImage: "",
-    avatarImage: "",
+    tnImage:
+      "https://uploads-ssl.webflow.com/5f7a7ffa492a45b794b9af3b/5f8942db9f88ea66bc95401f_tn-image-velog.jpg",
+    avatarImage:
+      "https://uploads-ssl.webflow.com/5fc51531a09d7c68c1ad5d68/5fc76f9b555c1eee14b09761_1606905754834-image9-p-500.jpeg",
   },
 ];

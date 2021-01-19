@@ -24,7 +24,13 @@ const ListItem = () => {
           return (
             <ListItemWrapper key={id}>
               <AvatarWrapper>
-                <Avatar avatarImage={avatarImage} />
+                <Avatar
+                  style={{
+                    backgroundImage: "url(" + avatarImage + ")",
+                    backgroundPosition: "center",
+                    backgroundSize: "cover",
+                  }}
+                />
               </AvatarWrapper>
               <Product product={product} />
             </ListItemWrapper>
