@@ -61,7 +61,7 @@ const NewsLetterFormField = styled.input`
 const NewsLetterSubmitBtn = styled.input`
   display: block;
   padding: 0.755rem;
-  border: none;
+  border: solid 1px ${({ theme }) => theme.colors.primary};
   background-color: ${({ theme }) => theme.colors.primary};
   color: #fff;
   border-radius: 10rem;

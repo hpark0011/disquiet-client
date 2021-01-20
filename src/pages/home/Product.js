@@ -7,7 +7,6 @@ import ArrowUpwardIcon from "@material-ui/icons/ArrowUpward";
 
 const Product = ({ product }) => {
   const [click, setClick] = useState(true);
-  console.log(product.id);
 
   const upvoteButtonToggle = () => {
     setClick(!click);
