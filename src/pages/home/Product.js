@@ -1,10 +1,13 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import styled, { ThemeProvider } from "styled-components";
 import theme from "../../theme";
 import commentIcn from "../../assets/ic-comment.svg";
 import ArrowUpwardIcon from "@material-ui/icons/ArrowUpward";
+
 const Product = ({ product }) => {
   const [click, setClick] = useState(true);
+  console.log(product.id);
 
   const upvoteButtonToggle = () => {
     setClick(!click);
@@ -24,7 +27,7 @@ const Product = ({ product }) => {
       <ThemeProvider theme={theme}>
         <ProductWrapper>
           <ProductHeader>@{userName}</ProductHeader>
-          <ProductBody>
+          <ProductBody to={`/product/${product.id}`}>
             <TnImage
               style={{
                 backgroundImage: "url(" + tnImage + ")",
@@ -81,12 +84,13 @@ const ProductHeader = styled.div`
   line-height: 1em;
 `;
 
-const ProductBody = styled.div`
+const ProductBody = styled(Link)`
   display: flex;
   flex-direction: row;
   background-color: ${({ theme }) => theme.colors.gray_1};
   padding: 1rem;
   border-radius: 1.5rem;
+  text-decoration: none;
 `;
 
 const TnImage = styled.div`
@@ -108,6 +112,7 @@ const TextContent = styled.div`
     font-weight: 500;
     line-height: 1em;
     margin: 0;
+    color: #000;
   }
 `;
 

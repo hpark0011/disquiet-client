@@ -9,24 +9,26 @@ const LeftColumn = ({ filterItems }) => {
   return (
     <ThemeProvider theme={theme}>
       <LeftContainer>
-        <p>TOPIC</p>
-        <CategoriesWrapper>
-          {categories.map((category) => {
-            const { id, name } = category;
-            return (
-              <div key={id}>
-                <CategoryBtn
-                  onClick={() => {
-                    filterItems(name);
-                  }}
-                >
-                  {name}
-                </CategoryBtn>
-              </div>
-            );
-          })}
-        </CategoriesWrapper>
-        {/* <Divider /> */}
+        <div style={{ display: "block", position: "sticky", top: "5.5rem" }}>
+          <p>TOPIC</p>
+          <CategoriesWrapper>
+            {categories.map((category) => {
+              const { id, name } = category;
+              return (
+                <div key={id}>
+                  <CategoryBtn
+                    onClick={() => {
+                      filterItems(name);
+                    }}
+                  >
+                    {name}
+                  </CategoryBtn>
+                </div>
+              );
+            })}
+          </CategoriesWrapper>
+          {/* <Divider /> */}
+        </div>
       </LeftContainer>
     </ThemeProvider>
   );

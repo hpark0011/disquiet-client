@@ -10,18 +10,17 @@ const RightColumn = () => {
   return (
     <ThemeProvider theme={theme}>
       <RightColumnWrapper>
-        <NewsLetter />
-        <Community />
-        <Footer />
+        <div style={{ display: "block", position: "sticky", top: "5.5rem" }}>
+          <NewsLetter />
+          <Community />
+          <Footer />
+        </div>
       </RightColumnWrapper>
     </ThemeProvider>
   );
 };
 
 const RightColumnWrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-
   @media ${({ theme }) => theme.devices.tablet} {
     display: none;
   }
