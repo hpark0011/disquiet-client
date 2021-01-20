@@ -90,6 +90,10 @@ const ProductBody = styled(Link)`
   padding: 1rem;
   border-radius: 1.5rem;
   text-decoration: none;
+
+  &:hover {
+    background-color: #f8f9fa;
+  }
 `;
 
 const TnImage = styled.div`
