@@ -65,7 +65,7 @@ export const productsData = [
     productTitle: "Hackers News",
     desc: "해커들을 위한 게시판",
     upvote: "32",
-    category: "🏘 커뮤니티",
+    category: "📷 라이프스타일",
     comment: "33",
     tnImage:
       "https://uploads-ssl.webflow.com/5fc51531a09d7c68c1ad5d68/5fc76e27de068e53c44799ff_tn-image-04.jpg",
@@ -104,10 +104,127 @@ export const productsData = [
     productTitle: "Facebook",
     desc: "친구들, 가족들과 연결할 수 있는 소셜네트워크",
     upvote: "8",
-    category: "👫 소셜",
+    category: "👟 소비재 브랜드",
     comment: "3",
     tnImage:
       "https://uploads-ssl.webflow.com/5f7a7ffa492a45b794b9af3b/5f8942db9f88ea66bc95401f_tn-image-velog.jpg",
+    avatarImage:
+      "https://uploads-ssl.webflow.com/5fc51531a09d7c68c1ad5d68/5fc76f9b555c1eee14b09761_1606905754834-image9-p-500.jpeg",
+  },
+  {
+    id: 8,
+    userName: "아라곤",
+    productTitle: "캔바",
+    desc: "무료 온라인 디자인 제작 툴",
+    upvote: "121",
+    category: "🔗 블록체인",
+    comment: "11",
+    tnImage:
+      "https://uploads-ssl.webflow.com/5f7a7ffa492a45b794b9af3b/5fcf8ae8b11b7868d9100152_tn-image-canva.jpg",
+    avatarImage:
+      "https://uploads-ssl.webflow.com/5fc51531a09d7c68c1ad5d68/5fc76f9a60c2693285a0eac5_1606905753766-image14-p-500.jpeg",
+  },
+  {
+    id: 9,
+    userName: "사이먼",
+    productTitle: "Origami",
+    desc: "올인원 디자인, 프로토타입, 애니메이션 툴",
+    upvote: "11",
+    category: "👟 소비재 브랜드",
+    comment: "8",
+    tnImage:
+      "https://uploads-ssl.webflow.com/5f7a7ffa492a45b794b9af3b/5fd0d5c705b523490203885e_tn-image-origami.jpg",
+    avatarImage:
+      "https://uploads-ssl.webflow.com/5fc51531a09d7c68c1ad5d68/5fc76f9a531a3d21b3951549_1606905754344-image3-p-500.jpeg",
+  },
+  {
+    id: 10,
+    userName: "제르미",
+    productTitle: "Facebook",
+    desc: "친구들, 가족들과 연결할 수 있는 소셜네트워크",
+    upvote: "8",
+    category: "📡 중개 플랫폼",
+    comment: "3",
+    tnImage:
+      "https://uploads-ssl.webflow.com/5f7a7ffa492a45b794b9af3b/5f90f3a506cbd8b554415112_tn-image-onulhoi.jpg",
+    avatarImage:
+      "https://uploads-ssl.webflow.com/5fc51531a09d7c68c1ad5d68/5fc76f9b555c1eee14b09761_1606905754834-image9-p-500.jpeg",
+  },
+  {
+    id: 11,
+    userName: "트럼프",
+    productTitle: "Datasaour",
+    desc: "AI가 가미된 데이터 라벨링 관리 툴",
+    upvote: "8",
+    category: "💰 금융",
+    comment: "3",
+    tnImage:
+      "https://uploads-ssl.webflow.com/5f7a7ffa492a45b794b9af3b/5fa9c3b560d75a565a9883a6_tn-image-datasaur.jpg",
+    avatarImage:
+      "https://uploads-ssl.webflow.com/5fc51531a09d7c68c1ad5d68/5fc76f9b555c1eee14b09761_1606905754834-image9-p-500.jpeg",
+  },
+  {
+    id: 12,
+    userName: "바이든",
+    productTitle: "Facebook",
+    desc: "친구들, 가족들과 연결할 수 있는 소셜네트워크",
+    upvote: "8",
+    category: "🔮 마케팅툴",
+    comment: "3",
+    tnImage:
+      "https://uploads-ssl.webflow.com/5f7a7ffa492a45b794b9af3b/5fa9c42d4009b7351c495a58_tn-image-dataloop.jpg",
+    avatarImage:
+      "https://uploads-ssl.webflow.com/5fc51531a09d7c68c1ad5d68/5fc76f9b555c1eee14b09761_1606905754834-image9-p-500.jpeg",
+  },
+  {
+    id: 13,
+    userName: "요셉",
+    productTitle: "Facebook",
+    desc: "친구들, 가족들과 연결할 수 있는 소셜네트워크",
+    upvote: "8",
+    category: "🏘 커뮤니티",
+    comment: "3",
+    tnImage:
+      "https://uploads-ssl.webflow.com/5f7a7ffa492a45b794b9af3b/5f90f3a506cbd8b554415112_tn-image-onulhoi.jpg",
+    avatarImage:
+      "https://uploads-ssl.webflow.com/5fc51531a09d7c68c1ad5d68/5fc76f9b555c1eee14b09761_1606905754834-image9-p-500.jpeg",
+  },
+  {
+    id: 14,
+    userName: "오바마",
+    productTitle: "Facebook",
+    desc: "친구들, 가족들과 연결할 수 있는 소셜네트워크",
+    upvote: "8",
+    category: "📡 중개 플랫폼",
+    comment: "3",
+    tnImage:
+      "https://uploads-ssl.webflow.com/5f7a7ffa492a45b794b9af3b/5f90f3a506cbd8b554415112_tn-image-onulhoi.jpg",
+    avatarImage:
+      "https://uploads-ssl.webflow.com/5fc51531a09d7c68c1ad5d68/5fc76f9b555c1eee14b09761_1606905754834-image9-p-500.jpeg",
+  },
+  {
+    id: 15,
+    userName: "힐러리",
+    productTitle: "Facebook",
+    desc: "친구들, 가족들과 연결할 수 있는 소셜네트워크",
+    upvote: "8",
+    category: "🎨 디자인",
+    comment: "3",
+    tnImage:
+      "https://uploads-ssl.webflow.com/5f7a7ffa492a45b794b9af3b/5f90f3a506cbd8b554415112_tn-image-onulhoi.jpg",
+    avatarImage:
+      "https://uploads-ssl.webflow.com/5fc51531a09d7c68c1ad5d68/5fc76f9b555c1eee14b09761_1606905754834-image9-p-500.jpeg",
+  },
+  {
+    id: 16,
+    userName: "저커버그",
+    productTitle: "Facebook",
+    desc: "친구들, 가족들과 연결할 수 있는 소셜네트워크",
+    upvote: "8",
+    category: "🤖 인공지능",
+    comment: "3",
+    tnImage:
+      "https://uploads-ssl.webflow.com/5f7a7ffa492a45b794b9af3b/5f90f3a506cbd8b554415112_tn-image-onulhoi.jpg",
     avatarImage:
       "https://uploads-ssl.webflow.com/5fc51531a09d7c68c1ad5d68/5fc76f9b555c1eee14b09761_1606905754834-image9-p-500.jpeg",
   },

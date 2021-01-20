@@ -4,14 +4,14 @@ import theme from "../../theme";
 import ListHeader from "./ListHeader";
 import ListItem from "./ListItem";
 
-const CenterColumn = () => {
+const CenterColumn = ({ listItems }) => {
   return (
     <ThemeProvider theme={theme}>
       <CenterContainer>
         <ListHeader />
         <ListContainer>
           <List>
-            <ListItem></ListItem>
+            <ListItem listItems={listItems}></ListItem>
           </List>
         </ListContainer>
       </CenterContainer>

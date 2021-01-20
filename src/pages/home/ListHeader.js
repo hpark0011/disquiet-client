@@ -6,7 +6,7 @@ const ListHeader = () => {
   return (
     <ThemeProvider theme={theme}>
       <ListHeaderWrapper>
-        <p>List Category</p>
+        <p>🌕 전체</p>
         <ListSortWrapper>
           <ListSortItem>인기</ListSortItem>
           <ListSortItemDivider />

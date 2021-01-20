@@ -1,15 +1,13 @@
 import React, { useState } from "react";
 import styled, { ThemeProvider } from "styled-components";
 import theme from "../../theme";
-import { productsData } from "../../data";
 import Product from "./Product";
 
-const ListItem = () => {
-  const products = productsData;
+const ListItem = ({ listItems }) => {
   return (
     <>
       <ThemeProvider theme={theme}>
-        {products.map((product) => {
+        {listItems.map((product) => {
           const {
             id,
             userName,

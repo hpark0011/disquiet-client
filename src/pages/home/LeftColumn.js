@@ -4,7 +4,7 @@ import styled, { ThemeProvider } from "styled-components";
 import theme from "../../theme";
 import { NavLink } from "react-router-dom";
 
-const LeftColumn = () => {
+const LeftColumn = ({ filterItems }) => {
   const categories = categoriesData;
   return (
     <ThemeProvider theme={theme}>
@@ -15,12 +15,18 @@ const LeftColumn = () => {
             const { id, name } = category;
             return (
               <div key={id}>
-                <StyledNavLink to="/category/:id">{name}</StyledNavLink>
+                <CategoryBtn
+                  onClick={() => {
+                    filterItems(name);
+                  }}
+                >
+                  {name}
+                </CategoryBtn>
               </div>
             );
           })}
         </CategoriesWrapper>
-        <Divider />
+        {/* <Divider /> */}
       </LeftContainer>
     </ThemeProvider>
   );
@@ -33,6 +39,28 @@ const CategoriesWrapper = styled.div`
 `;
 
 const activeClassName = "nav-item-active";
+
+const CategoryBtn = styled.button`
+  display: block;
+  color: ${({ theme }) => theme.colors.gray_4};
+  padding: 0.25rem;
+  padding-left: 0.5rem;
+  border: none;
+  background-color: transparent;
+  width: 100%;
+  text-align: left;
+  outline: none;
+
+  &:hover {
+    background-color: ${({ theme }) => theme.colors.gray_1};
+    border-radius: 0.75rem;
+  }
+
+  &.${activeClassName} {
+    background-color: ${({ theme }) => theme.colors.gray_1};
+    border-radius: 0.75rem;
+  }
+`;
 
 const StyledNavLink = styled(NavLink)`
   display: block;

@@ -21,6 +21,10 @@ const RightColumn = () => {
 const RightColumnWrapper = styled.div`
   display: flex;
   flex-direction: column;
+
+  @media ${({ theme }) => theme.devices.tablet} {
+    display: none;
+  }
 `;
 
 export default RightColumn;
