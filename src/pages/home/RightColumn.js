@@ -19,7 +19,8 @@ const RightColumn = () => {
 };
 
 const RightColumnWrapper = styled.div`
-  display: block;
+  display: flex;
+  flex-direction: column;
 `;
 
 export default RightColumn;

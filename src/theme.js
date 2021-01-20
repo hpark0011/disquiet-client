@@ -17,7 +17,7 @@ const colors = {
   error: "#D70000",
   warning: "#FAAD14",
   informational: "#0085FF",
-  gray_1: "#f5f5f5",
+  gray_1: "#f3f4f5",
   gray_2: "#E0E0E0",
   gray_3: "#8e8e8e",
   gray_4: "#707070",
