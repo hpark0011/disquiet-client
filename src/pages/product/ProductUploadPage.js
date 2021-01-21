@@ -71,6 +71,7 @@ const Container = styled.div`
     text-align: center;
     font-size: ${({ theme }) => theme.fontSizes.xxl};
     font-weight: 400;
+    margin-bottom: 1rem;
   }
 `;
 
@@ -80,8 +81,7 @@ const FormWrapper = styled.form`
   align-items: center;
   margin: auto;
   padding: 2rem 1.5rem;
-  margin-top: 1.5rem;
-  background-color: transparent;
+  background-color: white;
   width: 37.5rem;
   border-radius: 2rem;
   border: 1px solid ${({ theme }) => theme.colors.gray_2};

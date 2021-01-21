@@ -25,9 +25,9 @@ export const productsData = [
     userName: "해리",
     productTitle: "넥스트 유니콘",
     desc: "투자자와 창업자 중개 플랫폼",
-    upvote: "32",
+    upvote: 32,
     category: "📡 중개 플랫폼",
-    comment: "8",
+    comment: 8,
     tnImage:
       "https://uploads-ssl.webflow.com/5fc51531a09d7c68c1ad5d68/5fc76eabb863f231d6b3915b_tn-image-05.jpg",
     avatarImage:
@@ -38,9 +38,9 @@ export const productsData = [
     userName: "론위즐리",
     productTitle: "Webflow",
     desc: "노코드 웹사이트 빌더",
-    upvote: "12",
+    upvote: 12,
     category: "💻 노코드",
-    comment: "93",
+    comment: 93,
     tnImage:
       "https://uploads-ssl.webflow.com/5fc51531a09d7c68c1ad5d68/5fc76e7590ec1d32e8e24d9f_tn-iamge-02.jpg",
     avatarImage:
@@ -51,9 +51,9 @@ export const productsData = [
     userName: "헤르미온느",
     productTitle: "Product Hunt",
     desc: "프로덕트 디스커버리 사이트",
-    upvote: "37",
+    upvote: 37,
     category: "🏘 커뮤니티",
-    comment: "13",
+    comment: 13,
     tnImage:
       "https://uploads-ssl.webflow.com/5fc51531a09d7c68c1ad5d68/5fc76e5895e74945ebc945f5_tn-image-03.jpg",
     avatarImage:
@@ -64,9 +64,9 @@ export const productsData = [
     userName: "해그리드",
     productTitle: "Hackers News",
     desc: "해커들을 위한 게시판",
-    upvote: "32",
+    upvote: 32,
     category: "📷 라이프스타일",
-    comment: "33",
+    comment: 33,
     tnImage:
       "https://uploads-ssl.webflow.com/5fc51531a09d7c68c1ad5d68/5fc76e27de068e53c44799ff_tn-image-04.jpg",
     avatarImage:
@@ -77,9 +77,9 @@ export const productsData = [
     userName: "덤블도어",
     productTitle: "Loom",
     desc: "비디오 메세징 툴",
-    upvote: "11",
+    upvote: 11,
     category: "🚲 생산성",
-    comment: "63",
+    comment: 63,
     tnImage:
       "https://uploads-ssl.webflow.com/5fc51531a09d7c68c1ad5d68/5fc76dd3de0a3818fc22d3bc_tn-image-01.jpg",
     avatarImage:
@@ -90,9 +90,9 @@ export const productsData = [
     userName: "프로도",
     productTitle: "Pinterest",
     desc: "인터넷에 있는 영감들을 수집하는 플랫폼",
-    upvote: "100",
+    upvote: 100,
     category: "👫 소셜",
-    comment: "15",
+    comment: 15,
     tnImage:
       "https://uploads-ssl.webflow.com/5f7a7ffa492a45b794b9af3b/5f7c5a25f93817a393a2cc03_tn-image-airtable.jpg",
     avatarImage:
@@ -103,9 +103,9 @@ export const productsData = [
     userName: "레골라스",
     productTitle: "Facebook",
     desc: "친구들, 가족들과 연결할 수 있는 소셜네트워크",
-    upvote: "8",
+    upvote: 8,
     category: "👟 소비재 브랜드",
-    comment: "3",
+    comment: 3,
     tnImage:
       "https://uploads-ssl.webflow.com/5f7a7ffa492a45b794b9af3b/5f8942db9f88ea66bc95401f_tn-image-velog.jpg",
     avatarImage:
@@ -116,9 +116,9 @@ export const productsData = [
     userName: "아라곤",
     productTitle: "캔바",
     desc: "무료 온라인 디자인 제작 툴",
-    upvote: "121",
+    upvote: 121,
     category: "🔗 블록체인",
-    comment: "11",
+    comment: 11,
     tnImage:
       "https://uploads-ssl.webflow.com/5f7a7ffa492a45b794b9af3b/5fcf8ae8b11b7868d9100152_tn-image-canva.jpg",
     avatarImage:
@@ -129,9 +129,9 @@ export const productsData = [
     userName: "사이먼",
     productTitle: "Origami",
     desc: "올인원 디자인, 프로토타입, 애니메이션 툴",
-    upvote: "11",
+    upvote: 11,
     category: "👟 소비재 브랜드",
-    comment: "8",
+    comment: 8,
     tnImage:
       "https://uploads-ssl.webflow.com/5f7a7ffa492a45b794b9af3b/5fd0d5c705b523490203885e_tn-image-origami.jpg",
     avatarImage:
@@ -142,9 +142,9 @@ export const productsData = [
     userName: "제르미",
     productTitle: "Facebook",
     desc: "친구들, 가족들과 연결할 수 있는 소셜네트워크",
-    upvote: "8",
+    upvote: 8,
     category: "📡 중개 플랫폼",
-    comment: "3",
+    comment: 3,
     tnImage:
       "https://uploads-ssl.webflow.com/5f7a7ffa492a45b794b9af3b/5f90f3a506cbd8b554415112_tn-image-onulhoi.jpg",
     avatarImage:
@@ -155,9 +155,9 @@ export const productsData = [
     userName: "트럼프",
     productTitle: "Datasaour",
     desc: "AI가 가미된 데이터 라벨링 관리 툴",
-    upvote: "8",
+    upvote: 8,
     category: "💰 금융",
-    comment: "3",
+    comment: 3,
     tnImage:
       "https://uploads-ssl.webflow.com/5f7a7ffa492a45b794b9af3b/5fa9c3b560d75a565a9883a6_tn-image-datasaur.jpg",
     avatarImage:
@@ -168,9 +168,9 @@ export const productsData = [
     userName: "바이든",
     productTitle: "Facebook",
     desc: "친구들, 가족들과 연결할 수 있는 소셜네트워크",
-    upvote: "8",
+    upvote: 8,
     category: "🔮 마케팅툴",
-    comment: "3",
+    comment: 3,
     tnImage:
       "https://uploads-ssl.webflow.com/5f7a7ffa492a45b794b9af3b/5fa9c42d4009b7351c495a58_tn-image-dataloop.jpg",
     avatarImage:
@@ -181,9 +181,9 @@ export const productsData = [
     userName: "요셉",
     productTitle: "Facebook",
     desc: "친구들, 가족들과 연결할 수 있는 소셜네트워크",
-    upvote: "8",
+    upvote: 8,
     category: "🏘 커뮤니티",
-    comment: "3",
+    comment: 3,
     tnImage:
       "https://uploads-ssl.webflow.com/5f7a7ffa492a45b794b9af3b/5f90f3a506cbd8b554415112_tn-image-onulhoi.jpg",
     avatarImage:
@@ -194,9 +194,9 @@ export const productsData = [
     userName: "오바마",
     productTitle: "Facebook",
     desc: "친구들, 가족들과 연결할 수 있는 소셜네트워크",
-    upvote: "8",
+    upvote: 8,
     category: "📡 중개 플랫폼",
-    comment: "3",
+    comment: 3,
     tnImage:
       "https://uploads-ssl.webflow.com/5f7a7ffa492a45b794b9af3b/5f90f3a506cbd8b554415112_tn-image-onulhoi.jpg",
     avatarImage:
@@ -207,9 +207,9 @@ export const productsData = [
     userName: "힐러리",
     productTitle: "Facebook",
     desc: "친구들, 가족들과 연결할 수 있는 소셜네트워크",
-    upvote: "8",
+    upvote: 8,
     category: "🎨 디자인",
-    comment: "3",
+    comment: 3,
     tnImage:
       "https://uploads-ssl.webflow.com/5f7a7ffa492a45b794b9af3b/5f90f3a506cbd8b554415112_tn-image-onulhoi.jpg",
     avatarImage:
@@ -220,9 +220,9 @@ export const productsData = [
     userName: "저커버그",
     productTitle: "Facebook",
     desc: "친구들, 가족들과 연결할 수 있는 소셜네트워크",
-    upvote: "8",
+    upvote: 8,
     category: "🤖 인공지능",
-    comment: "3",
+    comment: 3,
     tnImage:
       "https://uploads-ssl.webflow.com/5f7a7ffa492a45b794b9af3b/5f90f3a506cbd8b554415112_tn-image-onulhoi.jpg",
     avatarImage:

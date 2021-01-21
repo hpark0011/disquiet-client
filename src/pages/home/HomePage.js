@@ -25,7 +25,7 @@ function HomePage() {
 
   return (
     <ThemeProvider theme={theme}>
-      <PageContainer>
+      <PageContainer >
         <MainContainer>
           <LeftColumn filterItems={filterItems} />
           <CenterColumn listItems={listItems} />

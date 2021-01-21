@@ -8,10 +8,6 @@ import ArrowUpwardIcon from "@material-ui/icons/ArrowUpward";
 const Product = ({ product }) => {
   const [click, setClick] = useState(true);
 
-  const upvoteButtonToggle = () => {
-    setClick(!click);
-  };
-
   const {
     userName,
     productTitle,
@@ -21,6 +17,14 @@ const Product = ({ product }) => {
     tnImage,
     category,
   } = product;
+
+  const [voteCount, setVoteCount] = useState(upvote);
+
+  const upvoteButtonToggle = () => {
+    setClick(!click);
+    setVoteCount(voteCount + 1);
+  };
+
   return (
     <>
       <ThemeProvider theme={theme}>
@@ -56,7 +60,7 @@ const Product = ({ product }) => {
                       : { color: "#6D55FF", width: "20px", height: "20px" }
                   }
                 />
-                <UpvoteCount click={click}>{upvote}</UpvoteCount>
+                <UpvoteCount click={click}>{voteCount}</UpvoteCount>
               </UpvoteButton>
             </UpvoteButtonWrapper>
           </ProductBody>
