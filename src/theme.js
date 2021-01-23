@@ -12,13 +12,13 @@ const fontSizes = {
 
 const colors = {
   primary: "#6D55FF",
-  secondary: "#E50123",
+  secondary: "#F1EEFC",
   success: "#00AC32",
   error: "#D70000",
   warning: "#FAAD14",
   informational: "#0085FF",
-  gray_1: "#f3f4f5",
-  gray_2: "#E0E0E0",
+  gray_1: "#F5F5f7",
+  gray_2: "#EaEaEc",
   gray_3: "#8e8e8e",
   gray_4: "#707070",
   white: "#ffffff",
