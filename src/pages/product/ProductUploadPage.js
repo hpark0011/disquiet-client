@@ -42,10 +42,7 @@ function ProductUploadPage() {
             <FormLabel type="label" placeholder="">
               추천이유<Span>*</Span>
             </FormLabel>
-            <TextArea
-              type="textarea"
-              placeholder="예시 - 새로운 서비스 영감을 얻는데에 도움이 되요!"
-            />
+            <TextArea type="textarea" />
             <FormSubmitBtn type="submit" value="프로덕트 올리기" />
           </FormWrapper>
         </Container>
@@ -69,9 +66,9 @@ const Container = styled.div`
 
   p {
     text-align: center;
-    font-size: ${({ theme }) => theme.fontSizes.xxl};
+    font-size: ${({ theme }) => theme.fontSizes.xl};
     font-weight: 400;
-    margin-bottom: 1rem;
+    margin-bottom: 1.25rem;
   }
 `;
 
@@ -101,10 +98,11 @@ const FormInput = styled.input`
   width: 98%;
   background-color: ${({ theme }) => theme.colors.gray_1};
   border: 1px solid ${({ theme }) => theme.colors.gray_1};
-  border-radius: 2rem;
-  font-size: ${({ theme }) => theme.fontSizes.sm};
-  padding: 0.75rem 0.875rem;
-  margin-bottom: 1rem;
+  border-radius: 1rem;
+  font-size: ${({ theme }) => theme.fontSizes.xs};
+  padding: 0.5rem 0.75rem;
+  margin-bottom: 1.25rem;
+  outline: none;
 `;
 
 const TextArea = styled.textarea`
@@ -112,23 +110,29 @@ const TextArea = styled.textarea`
   width: 98%;
   background-color: ${({ theme }) => theme.colors.gray_1};
   border: 1px solid ${({ theme }) => theme.colors.gray_1};
-  border-radius: 2rem;
+  border-radius: 1rem;
   font-size: ${({ theme }) => theme.fontSizes.sm};
   padding: 0.75rem 0.875rem;
   margin-bottom: 1rem;
-  height: 3rem;
+  height: 4rem;
+  resize: none;
+  outline: none;
 `;
 
 const FormSubmitBtn = styled.input`
   display: block;
-  margin: auto;
   background-color: ${({ theme }) => theme.colors.primary};
   border: 1px solid ${({ theme }) => theme.colors.primary};
   border-radius: 2rem;
-  padding: 0.75rem 1.25rem;
+  padding: 0.5rem 1rem;
   color: #fff;
-  margin-top: 2rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
   font-size: ${({ theme }) => theme.fontSizes.sm};
+  cursor: pointer;
+  &:hover {
+    opacity: 0.7;
+  }
 `;
 
 const Span = styled.span`

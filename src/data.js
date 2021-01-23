@@ -229,3 +229,23 @@ export const productsData = [
       "https://uploads-ssl.webflow.com/5fc51531a09d7c68c1ad5d68/5fc76f9b555c1eee14b09761_1606905754834-image9-p-500.jpeg",
   },
 ];
+
+export const commentsData = [
+  {
+    id: 1,
+    userName: "저커버그",
+    avatarImage:
+      "https://uploads-ssl.webflow.com/5fc51531a09d7c68c1ad5d68/5fc76f9b555c1eee14b09761_1606905754834-image9-p-500.jpeg",
+    comment: "좋은 서비스인 것 같아요!",
+    timeStamp: "1d",
+  },
+  {
+    id: 2,
+    userName: "해그리드",
+    avatarImage:
+      "https://uploads-ssl.webflow.com/5fc51531a09d7c68c1ad5d68/5fc76f9a60c2693285a0eac5_1606905753766-image14-p-500.jpeg",
+    comment:
+      "최근 발견한 work communication messaging app인데 괜찮은 것 같아 공유해요! 창업자인 Pettersson은 전에 stripe에서 creative director로 일하다가 전 YC회장 Sam Altman이 현재 운영하고 있는 OpenAI에서 초기 디자인 작업을 했었다고 하네요. ",
+    timeStamp: "20m",
+  },
+];
