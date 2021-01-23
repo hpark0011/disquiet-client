@@ -47,7 +47,7 @@ const ListItemWrapper = styled.div`
 const AvatarWrapper = styled.div`
   display: flex;
   flex-direction: column;
-  margin-right: 1rem;
+  margin-right: 0.75rem;
 `;
 
 const Avatar = styled.div`

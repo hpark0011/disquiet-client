@@ -83,7 +83,7 @@ const ProductHeader = styled.div`
   color: ${({ theme }) => theme.colors.gray_4};
   font-size: ${({ theme }) => theme.fontSizes.sm};
   margin-top: none;
-  margin-bottom: 1rem;
+  margin-bottom: 0.75rem;
   line-height: 1em;
 `;
 
