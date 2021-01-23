@@ -59,7 +59,7 @@ const NewsLetterFormWrapper = styled.form`
   align-items: center;
   margin-bottom: 0.75rem;
   background-color: ${({ theme }) => theme.colors.gray_1};
-  padding: 0.25rem 0.25rem 0.25rem 0.5rem;
+  padding: 0.25rem 0.25rem 0.25rem 0.75rem;
   border-radius: 2rem;
 `;
 
