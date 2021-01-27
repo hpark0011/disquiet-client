@@ -1,11 +1,12 @@
-import React, { useState } from "react";
-import styled, { ThemeProvider, css } from "styled-components";
-import logo from "../assets/disquiet_logo.png";
-import { NavLink, Link } from "react-router-dom";
-import theme from "../theme";
-import MenuIcon from "@material-ui/icons/Menu";
-import CloseIcon from "@material-ui/icons/Close";
-import AddCircleIcon from "@material-ui/icons/AddCircle";
+import React, { useState } from 'react';
+import styled, { ThemeProvider, css } from 'styled-components';
+import logo from '../assets/disquiet_logo.png';
+import { NavLink, Link } from 'react-router-dom';
+import theme from '../theme';
+import MenuIcon from '@material-ui/icons/Menu';
+import CloseIcon from '@material-ui/icons/Close';
+import AddCircleIcon from '@material-ui/icons/AddCircle';
+import CircleIcon from '../assets/add_circle_stroke_24px.svg';
 
 function Header() {
   const [click, setClick] = useState(false);
@@ -16,29 +17,29 @@ function Header() {
     <ThemeProvider theme={theme}>
       <Navbar>
         <NavContainer>
-          <LogoLink exact to="/">
-            <img src={logo} alt="logo" height="19" />
+          <LogoLink exact to='/'>
+            <img src={logo} alt='logo' height='19' />
           </LogoLink>
           <NavMenu onClick={handleClick} click={click}>
             <NavMenuContainer>
-              <StyledNavLink to="/community">커뮤니티</StyledNavLink>
-              <StyledNavLink to="/blog">블로그</StyledNavLink>
+              <StyledNavLink to='/community'>커뮤니티</StyledNavLink>
+              <StyledNavLink to='/blog'>블로그</StyledNavLink>
               <NavMenuDivider />
-              <StyledNavLink cta to="/product/new">
-                <StyledAddCircleIcon />
+              <StyledNavLink cta to='/product/new'>
+                <StyledAddCircleIcon src={CircleIcon} />
                 프로덕트 공유하기
               </StyledNavLink>
-              <LoginBtn to="/login">로그인</LoginBtn>
-              <LoginBtn primary={true} to="/register">
+              <LoginBtn to='/login'>로그인</LoginBtn>
+              <LoginBtn primary={true} to='/register'>
                 회원가입
               </LoginBtn>
             </NavMenuContainer>
           </NavMenu>
           <NavMenuIcon onClick={handleClick}>
             {click ? (
-              <CloseIcon style={{ color: "black" }} />
+              <CloseIcon style={{ color: 'black' }} />
             ) : (
-              <MenuIcon style={{ color: "black" }} />
+              <MenuIcon style={{ color: 'black' }} />
             )}
           </NavMenuIcon>
         </NavContainer>
@@ -92,13 +93,13 @@ const NavMenu = styled.div`
   height: 48px auto;
 
   @media ${({ theme }) => theme.devices.tablet} {
-    display: ${({ click }) => (click ? "flex" : "none")};
+    display: ${({ click }) => (click ? 'flex' : 'none')};
     padding: 0.5rem;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     position: absolute;
-    height: ${({ click }) => (click ? "auto" : "0px")};
+    height: ${({ click }) => (click ? 'auto' : '0px')};
     top: 3.5rem;
     right: 1rem;
     box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
@@ -116,7 +117,7 @@ const NavMenu = styled.div`
     top: 48px;
     height: 100%;
     width: 100%;
-    right: ${({ click }) => (click ? 0 : "-100%")};
+    right: ${({ click }) => (click ? 0 : '-100%')};
     transition: all 0.4s ease;
   }
 `;
@@ -131,13 +132,13 @@ const NavMenuContainer = styled.div`
   }
 `;
 
-const activeClassName = "nav-item-active";
+const activeClassName = 'nav-item-active';
 
 const StyledNavLink = styled(NavLink).attrs({ activeClassName })`
   display: flex;
   align-items: center;
-  margin-left: ${({ cta }) => (cta ? "0px" : "1rem")};
-  margin-right: ${({ cta }) => (cta ? ".5rem" : "0")};
+  margin-left: ${({ cta }) => (cta ? '0px' : '1rem')};
+  margin-right: ${({ cta }) => (cta ? '.5rem' : '0')};
   font-size: ${({ theme }) => theme.fontSizes.sm};
   line-height: 1em;
   color: black;
@@ -161,13 +162,13 @@ const StyledNavLink = styled(NavLink).attrs({ activeClassName })`
 
     &:hover {
       background-color: ${({ theme }) => theme.colors.gray_1};
-      border-radius: 0.75rem;
+      border-radius: 2rem;
       box-shadow: none;
     }
 
     &.${activeClassName} {
       background-color: ${({ theme }) => theme.colors.gray_1};
-      border-radius: 0.75rem;
+      border-radius: 2rem;
       box-shadow: none;
     }
   }
@@ -208,15 +209,16 @@ const NavMenuDivider = styled.div`
 const LoginBtn = styled(Link)`
   margin-left: 0.5rem;
   padding: 0.75rem 0.75rem;
-  background-color: ${({ primary }) => (primary ? "#6D55FF" : "#fff")};
+  background-color: ${({ primary }) => (primary ? '#6D55FF' : '#fff')};
   border: ${({ primary }) =>
-    primary ? "solid 1px #6D55FF" : "solid 1px #E0E0E0"};
+    primary ? 'solid 1px #6D55FF' : 'solid 1px #E0E0E0'};
   font-size: ${({ theme }) => theme.fontSizes.sm};
-  color: ${({ primary }) => (primary ? "white" : "black")};
+  color: ${({ primary }) => (primary ? 'white' : 'black')};
   line-height: 1em;
   text-decoration: none;
   border-radius: 10rem;
   font-weight: 400;
+  cursor: pointer;
 
   &:hover {
     opacity: 0.7;
@@ -230,12 +232,14 @@ const LoginBtn = styled(Link)`
     border: none;
     color: black;
     font-size: ${({ theme }) => theme.fontSizes.sm};
+    cursor: pointer;
 
     &:hover {
       background-color: ${({ theme }) => theme.colors.gray_1};
-      border-radius: 0.75rem;
+      border-radius: 2rem;
       box-shadow: none;
       opacity: 1;
+      line-height: 1em;
     }
   }
 
@@ -247,9 +251,9 @@ const LoginBtn = styled(Link)`
   }
 `;
 
-const StyledAddCircleIcon = styled(AddCircleIcon)`
+const StyledAddCircleIcon = styled.img`
   color: #6d55ff;
-  margin-right: 4px;
+  margin-right: 0.25rem;
 
   @media ${({ theme }) => theme.devices.tablet} {
     display: none;
