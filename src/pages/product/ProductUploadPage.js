@@ -100,7 +100,7 @@ const FormInput = styled.input`
   background-color: ${({ theme }) => theme.colors.gray_1};
   border: 1px solid ${({ theme }) => theme.colors.gray_1};
   border-radius: 1rem;
-  font-size: ${({ theme }) => theme.fontSizes.xs};
+  font-size: ${({ theme }) => theme.fontSizes.sm};
   padding: 0.5rem 0.75rem;
   margin-bottom: 1.25rem;
   outline: none;
